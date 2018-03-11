@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Quote.ConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "market.csv 1000"
+    }
+  }
+}
