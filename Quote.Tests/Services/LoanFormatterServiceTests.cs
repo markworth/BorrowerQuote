@@ -27,7 +27,7 @@ namespace Quote.Tests.Services
                 Amount = 1000,
                 MonthlyRepayment = 30.78111111M,
                 TotalRepayment = 1108.10101010101M,
-                Rate = 7.01M
+                Rate = 0.07M
             };
 
             var output = _loanFormatterService.FormatBorrowerQuote(quote);

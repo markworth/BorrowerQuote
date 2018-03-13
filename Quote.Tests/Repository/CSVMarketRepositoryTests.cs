@@ -12,12 +12,12 @@ namespace Quote.Tests.Repository
     [TestFixture]
     public class CSVMarketRepositoryTests
     {
-        private CSVMarketRepository _csvMarketRepository;
+        private MarketCSVReader _marketCsvReader;
 
         [SetUp]
         public void Setup()
         {
-            _csvMarketRepository = new CSVMarketRepository();
+            _marketCsvReader = new MarketCSVReader();
         }
 
         [Test]
@@ -32,7 +32,7 @@ John,0.081,320
 Dave,0.074,140
 Angela,0.071,60".Split('\n');
 
-            var lenders = _csvMarketRepository.GetLenders(inputLines);
+            var lenders = _marketCsvReader.GetLenders(inputLines);
 
             lenders.Count.ShouldBe(7);
             lenders[0].Name.ShouldBe("Bob");
@@ -56,7 +56,7 @@ Angela,0.071,60".Split('\n');
             bool hasThrown = false;
             try
             {
-                var lenders = _csvMarketRepository.GetLenders(inputLines);
+                var lenders = _marketCsvReader.GetLenders(inputLines);
             }
             catch (CsvFileNotValidException)
             {
@@ -76,7 +76,7 @@ Angela,0.071,60".Split('\n');
             bool hasThrown = false;
             try
             {
-                var lenders = _csvMarketRepository.GetLenders(inputLines);
+                var lenders = _marketCsvReader.GetLenders(inputLines);
             }
             catch (CsvFileNotValidException)
             {

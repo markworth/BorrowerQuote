@@ -7,7 +7,7 @@ using Quote.Core.Models;
 
 namespace Quote.Core.Repository
 {
-    public class CSVMarketRepository : IMarketRepository
+    public class MarketCSVReader : IMarketCSVReader
     {
         public IList<Lender> GetLenders(string[] csvFileLines)
         {

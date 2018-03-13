@@ -3,7 +3,7 @@ using Quote.Core.Models;
 
 namespace Quote.Core.Repository
 {
-    public interface IMarketRepository
+    public interface IMarketCSVReader
     {
         IList<Lender> GetLenders(string[] fileLines);
     }
